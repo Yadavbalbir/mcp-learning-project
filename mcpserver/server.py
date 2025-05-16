@@ -76,6 +76,14 @@ async def get_alerts(state: str) -> str:
         alerts.append(format_alert(feature))
     return "\n\n".join(alerts)
 
+@mcp.tool()
+async def get_average_rating()-> float:
+    """ Get the average rating of the app.
+    Returns:
+        float: The average rating of the app.
+    """
+    # Simulate a database call
+    return 4.5
 
 #prompt are basically reusable templates that helps LLMs to interact with the server 
 @mcp.prompt()
